@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reo John Quilquial | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f6fa;
+            color: #222;
+        }
+
+        /* Navigation */
+        header {
+            background-color: #101d35;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #d6ad60;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #d6ad60;
+        }
+
+        /* Home */
+        .home {
+            min-height: 85vh;
+            background: linear-gradient(120deg, #101d35, #243c60);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 60px 10%;
+            gap: 40px;
+        }
+
+        .home-text {
+            max-width: 550px;
+        }
+
+        .home-text h3 {
+            color: #d6ad60;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .home-text h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .home-text h2 {
+            font-size: 23px;
+            color: #d6ad60;
+            margin-bottom: 20px;
+        }
+
+        .home-text p {
+            line-height: 1.8;
+            color: #dce3ef;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #d6ad60;
+            color: #101d35;
+            padding: 13px 28px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: white;
+        }
+
+        .profile {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #d6ad60;
+        }
+
+        /* Sections */
+        section:not(.home) {
+            padding: 70px 10%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 30px;
+            color: #101d35;
+            margin-bottom: 35px;
+        }
+
+        .title span {
+            color: #c09243;
+        }
+
+        /* About */
+        .about {
+            text-align: center;
+            background-color: white;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.9;
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* Personal Information */
+        .info-box {
+            background-color: #f4f6fa;
+            max-width: 750px;
+            margin: auto;
+            padding: 25px;
+            border-left: 5px solid #d6ad60;
+            line-height: 2.2;
+        }
+
+        /* Education */
+        .education {
+            background-color: #e9edf4;
+        }
+
+        .education-box {
+            background-color: white;
+            padding: 30px;
+            max-width: 650px;
+            margin: auto;
+            text-align: center;
+            border-radius: 8px;
+            border-bottom: 4px solid #d6ad60;
+        }
+
+        .education-box h3 {
+            color: #101d35;
+            margin-bottom: 15px;
+        }
+
+        .education-box p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Skills */
+        .skills {
+            background-color: white;
+        }
+
+        .skill-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-box {
+            background-color: #f4f6fa;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            border-bottom: 3px solid #d6ad60;
+            transition: 0.3s;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px #00000015;
+        }
+
+        .skill-box h3 {
+            color: #101d35;
+            margin-bottom: 10px;
+        }
+
+        .skill-box p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Contact */
+        .contact {
+            background-color: #e9edf4;
+            text-align: center;
+        }
+
+        .contact-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+            line-height: 2.5;
+        }
+
+        .contact-box a {
+            color: #a77a2e;
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #101d35;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        footer span {
+            color: #d6ad60;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 13px;
+            }
+
+            .home {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .home-text h1 {
+                font-size: 34px;
+            }
+
+            .profile {
+                width: 210px;
+                height: 210px;
+            }
+
+            .skill-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">REO.</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+
+        <div class="home-text">
+            <h3>Hello, Welcome!</h3>
+            <h1>I'm Reo John Quilquial</h1>
+            <h2>BSIT 3rd Year Student</h2>
+
+            <p>
+                I am a 22-year-old Information Technology student
+                from Datag, Siaton, Negros Oriental. I am passionate
+                about technology, programming, and creative design.
+                I always aim to learn new things and improve my skills
+                to become a successful IT professional.
+            </p>
+
+            <a href="#about" class="btn">Discover More</a>
+        </div>
+
+        <!-- Replace reo.jpg with your own picture -->
+        <img src="reo.jpg" alt="Reo John Quilquial" class="profile">
+
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <h2 class="title">About <span>Me</span></h2>
+
+        <p>
+            My name is Reo John Quilquial, 22 years old, currently
+            taking Bachelor of Science in Information Technology
+            (BSIT) at Negros Oriental State University - Siaton Campus.
+            I am from Datag, Siaton, Negros Oriental. I have an interest
+            in computer technology, programming, and graphic design.
+            I believe that learning and practicing are important
+            steps in improving my knowledge and abilities.
+        </p>
+
+        <br><br>
+
+        <div class="info-box">
+            <p><strong>Name:</strong> Reo John Quilquial</p>
+            <p><strong>Age:</strong> 22 Years Old</p>
+            <p><strong>Course:</strong> BS Information Technology</p>
+            <p><strong>Year Level:</strong> 3rd Year</p>
+            <p><strong>Address:</strong> Datag, Siaton, Negros Oriental</p>
+        </div>
+
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+
+        <h2 class="title">My <span>Education</span></h2>
+
+        <div class="education-box">
+            <h3>Negros Oriental State University</h3>
+            <p>Bachelor of Science in Information Technology</p>
+            <p>3rd Year College</p>
+            <p>Siaton Campus</p>
+        </div>
+
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+
+        <h2 class="title">My <span>Skills</span></h2>
+
+        <div class="skill-container">
+
+            <div class="skill-box">
+                <h3>Microsoft Office</h3>
+                <p>Knowledge in Microsoft Word, Excel, and PowerPoint.</p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Graphics Editing</h3>
+                <p>Creating and editing pictures, designs, and layouts.</p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Java Programming</h3>
+                <p>Basic knowledge of Java coding and programming.</p>
+            </div>
+
+            <div class="skill-box">
+                <h3>HTML</h3>
+                <p>Creating and designing basic websites using HTML.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <h2 class="title">Contact <span>Me</span></h2>
+
+        <div class="contact-box">
+
+            <p><strong>Email:</strong>
+                <a href="mailto:reoquialquial@gmail.com">
+                    reoquialquial@gmail.com
+                </a>
+            </p>
+
+            <p><strong>Location:</strong>
+                Datag, Siaton, Negros Oriental
+            </p>
+
+            <p><strong>School:</strong>
+                NORSU - Siaton Campus
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 <span>Reo John Quilquial</span>. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
